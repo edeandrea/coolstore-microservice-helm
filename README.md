@@ -3,8 +3,8 @@ page_type: sample
 languages:
 - yaml
 products:
-- azure
-description: "Helm charts for MAD Coolstore."
+- MAD
+description: "Helm charts for MAD Coolstore"
 urlFragment: mad-helm-charts-coolstore
 ---
 
