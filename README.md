@@ -15,7 +15,7 @@ urlFragment: mad-helm-charts-coolstore
 Add the MAD Coolstore chart repository.
 
 ```
-helm repo add mad-coolstore https://azure-samples.github.io/helm-charts/
+helm repo add mad-coolstore-microservice https://rh-mad-workshop.github.io/coolstore-microservice-helm/
 ```
 
 ## Chart source
