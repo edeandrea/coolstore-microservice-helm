@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   coolstore-microservice:
   - apiVersion: v2
-    created: "2024-03-06T23:29:34.199807-05:00"
+    created: "2024-03-06T23:38:45.166355-05:00"
     dependencies:
     - alias: customers
       condition: customers.enabled
@@ -45,9 +45,9 @@ entries:
   coolstore-microservice-common:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2024-03-06T23:29:34.199988-05:00"
+    created: "2024-03-06T23:38:45.166507-05:00"
     description: A Common chart for the coolstore microservice in the MAD workshop
-    digest: d8b766b52e8e70818f0b70674d77edc4f3f2b5318701275e7c40c31ac39d5e8e
+    digest: 9e95e5b788ced4219b219f91546b86c9815ba94f1aee41f76003b30378954991
     icon: https://raw.githubusercontent.com/rh-mad-workshop/coolstore-microservice-helm/main/mad.svg
     keywords:
     - mad
@@ -59,4 +59,4 @@ entries:
     urls:
     - coolstore-microservice-common-1.0.0.tgz
     version: 1.0.0
-generated: "2024-03-06T23:29:34.199167-05:00"
+generated: "2024-03-06T23:38:45.165551-05:00"
