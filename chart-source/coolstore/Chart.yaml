@@ -4,6 +4,11 @@ description: Applications chart for the coolstore microservice in the MAD worksh
 icon: https://static.redhat.com/libs/redhat/brand-assets/latest/corp/logo.svg
 type: application
 version: 1.0.0
+keywords:
+  - mad
+  - coolstore
+  - microservice
+  - workshop
 
 dependencies:
   - name: common
