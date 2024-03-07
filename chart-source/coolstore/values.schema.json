@@ -6,7 +6,7 @@
             "description": "Defines the customers application you want to deploy",
             "properties": {
                 "runtime": {
-                    "type": "string",
+                    "type": ["string", "null"],
                     "description": "Runtime that you want to deploy"
                 },
                 "image": {
@@ -20,7 +20,7 @@
             "description": "Defines the orders application you want to deploy",
             "properties": {
                 "runtime": {
-                    "type": "string",
+                    "type": ["string", "null"],
                     "description": "Runtime that you want to deploy"
                 },
                 "image": {
@@ -34,7 +34,7 @@
             "description": "Defines the gateway application you want to deploy",
             "properties": {
                 "runtime": {
-                    "type": "string",
+                    "type": ["string", "null"],
                     "description": "Runtime that you want to deploy"
                 },
                 "image": {
@@ -48,7 +48,7 @@
             "description": "Defines the frontend application you want to deploy",
             "properties": {
                 "runtime": {
-                    "type": "string",
+                    "type": ["string", "null"],
                     "description": "Runtime that you want to deploy"
                 },
                 "image": {
@@ -62,7 +62,7 @@
             "description": "Defines the inventory application you want to deploy",
             "properties": {
                 "runtime": {
-                    "type": "string",
+                    "type": ["string", "null"],
                     "description": "Runtime that you want to deploy"
                 },
                 "image": {
