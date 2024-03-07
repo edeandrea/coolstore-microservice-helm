@@ -9,11 +9,14 @@ metadata:
     app.kubernetes.io/part-of: coolstore
     app.openshift.io/runtime: {{ .Values.app.runtime }}
     {{- if .Values.app.connectsToDB }}
-    app.openshift.io/connects-to: '[{"apiVersion":"apps.openshift.io/v1","kind":"Deployment","name":"inventory"},{"apiVersion":"apps.openshift.io/v1","kind":"Deployment","name":"postgresql-inventory"}]'
+    annotations:
+      app.openshift.io/connects-to: '[{"apiVersion":"apps.openshift.io/v1","kind":"Deployment","name":"inventory"},{"apiVersion":"apps.openshift.io/v1","kind":"Deployment","name":"postgresql-inventory"}]'
     {{- else if .Values.app.connectsToSvcs }}
-    app.openshift.io/connects-to: '[{"apiVersion":"apps/v1","kind":"Deployment","name":"customers"},{"apiVersion":"apps/v1","kind":"Deployment","name":"orders"},{"apiVersion":"apps/v1","kind":"Deployment","name":"inventory"}]'
+    annotations:
+      app.openshift.io/connects-to: '[{"apiVersion":"apps/v1","kind":"Deployment","name":"customers"},{"apiVersion":"apps/v1","kind":"Deployment","name":"orders"},{"apiVersion":"apps/v1","kind":"Deployment","name":"inventory"}]'
     {{- else if .Values.app.connectsTogateway }}
-    app.openshift.io/connects-to: '[{"apiVersion":"apps/v1","kind":"Deployment","name":"gateway"}]'
+    annotations:
+      app.openshift.io/connects-to: '[{"apiVersion":"apps/v1","kind":"Deployment","name":"gateway"}]'
     {{- end }}
   name: {{ .Values.app.name }}
 spec:
