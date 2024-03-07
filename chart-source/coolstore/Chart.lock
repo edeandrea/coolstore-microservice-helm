@@ -1,18 +1,18 @@
 dependencies:
 - name: common
   repository: file://../common
-  version: 0.1.0
+  version: 1.0.0
 - name: common
   repository: file://../common
-  version: 0.1.0
+  version: 1.0.0
 - name: common
   repository: file://../common
-  version: 0.1.0
+  version: 1.0.0
 - name: common
   repository: file://../common
-  version: 0.1.0
+  version: 1.0.0
 - name: common
   repository: file://../common
-  version: 0.1.0
-digest: sha256:9a5fd6fa3aad81103603eac1b0e38da2817289e8bf80da5f83b8e694c8172799
-generated: "2024-03-05T17:11:53.950269-05:00"
+  version: 1.0.0
+digest: sha256:57c0bcf1d4ec064abb0b2154814702095fbd8a582176d28a2979e9da40e95ec3
+generated: "2024-03-07T14:45:06.471884-05:00"
