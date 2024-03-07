@@ -65,6 +65,7 @@ inventory:
     name: postgresql-inventory
     replicaCount: 1
     image: quay.io/openshiftlabs/coolstore-microservice-inventory-postgresql:10-el8
+    
     imagePullPolicy: IfNotPresent 
     pgsqlUser: inventory
     pgsqlPassword: inventory
