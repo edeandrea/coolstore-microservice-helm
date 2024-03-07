@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   coolstore-microservice:
   - apiVersion: v2
-    created: "2024-03-06T23:03:33.043035-05:00"
+    created: "2024-03-06T23:10:32.834278-05:00"
     dependencies:
     - alias: customers
       condition: customers.enabled
@@ -30,8 +30,8 @@ entries:
       repository: file://../common
       version: 0.1.0
     description: Applications chart for the coolstore microservice in the MAD workshop
-    digest: c3ca3faf39882737111850fe27c69c079667b6a9de47aef2c64cd854bfd5042a
-    icon: https://static.redhat.com/libs/redhat/brand-assets/latest/corp/logo.svg
+    digest: e694b44bed16ef037b7bd7fc2f8f56cd3dbd68933cea36c7fcb4b07c7267f0f6
+    icon: https://raw.githubusercontent.com/rh-mad-workshop/coolstore-microservice-helm/main/mad.svg
     keywords:
     - mad
     - coolstore
@@ -45,9 +45,9 @@ entries:
   coolstore-microservice-common:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2024-03-06T23:03:33.043189-05:00"
+    created: "2024-03-06T23:10:32.834437-05:00"
     description: A Common chart for the coolstore microservice in the MAD workshop
-    digest: ceaeaef34751f97b493d7bcc46c6897d68adc84edd639bbf338d175937af69f4
+    digest: 42d0f95c6ada9d94a067fa08abcbb298ecc0dbcd71d7fb1f71b3d20d984f3d7a
     icon: https://static.redhat.com/libs/redhat/brand-assets/latest/corp/logo.svg
     keywords:
     - mad
@@ -59,4 +59,4 @@ entries:
     urls:
     - coolstore-microservice-common-1.0.0.tgz
     version: 1.0.0
-generated: "2024-03-06T23:03:33.04242-05:00"
+generated: "2024-03-06T23:10:32.833677-05:00"
