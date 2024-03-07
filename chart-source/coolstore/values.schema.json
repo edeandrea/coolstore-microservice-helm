@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "properties": {
+        "customers": {
+            "type": "object",
+            "description": "Defines the customers application you want to deploy",
+            "properties": {
+                "runtime": {
+                    "type": "string",
+                    "description": "Runtime that you want to deploy"
+                },
+                "image": {
+                    "type": "string",
+                    "description": "Image FQDN URL that you want to deploy"
+                }
+            }
+        },
+        "orders": {
+            "type": "object",
+            "description": "Defines the orders application you want to deploy",
+            "properties": {
+                "runtime": {
+                    "type": "string",
+                    "description": "Runtime that you want to deploy"
+                },
+                "image": {
+                    "type": "string",
+                    "description": "Image FQDN URL that you want to deploy"
+                }
+            }
+        },
+        "gateway": {
+            "type": "object",
+            "description": "Defines the gateway application you want to deploy",
+            "properties": {
+                "runtime": {
+                    "type": "string",
+                    "description": "Runtime that you want to deploy"
+                },
+                "image": {
+                    "type": "string",
+                    "description": "Image FQDN URL that you want to deploy"
+                }
+            }
+        },
+        "frontend": {
+            "type": "object",
+            "description": "Defines the frontend application you want to deploy",
+            "properties": {
+                "runtime": {
+                    "type": "string",
+                    "description": "Runtime that you want to deploy"
+                },
+                "image": {
+                    "type": "string",
+                    "description": "Image FQDN URL that you want to deploy"
+                }
+            }
+        },
+        "inventory": {
+            "type": "object",
+            "description": "Defines the inventory application you want to deploy",
+            "properties": {
+                "runtime": {
+                    "type": "string",
+                    "description": "Runtime that you want to deploy"
+                },
+                "image": {
+                    "type": "string",
+                    "description": "Image FQDN URL that you want to deploy"
+                }
+            }
+        }
+    }
+ }
