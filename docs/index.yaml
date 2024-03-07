@@ -1,19 +1,8 @@
 apiVersion: v1
 entries:
-  common:
+  coolstore-microservice:
   - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2024-03-05T17:15:08.595135-05:00"
-    description: Common chart
-    digest: 6f59043475325bca33f9496f11b8d38acc1df63b010d9f24bf763102dd1ac773
-    name: common
-    type: application
-    urls:
-    - common-0.1.0.tgz
-    version: 0.1.0
-  coolstore:
-  - apiVersion: v2
-    created: "2024-03-05T17:15:08.595614-05:00"
+    created: "2024-03-06T20:49:59.774888-05:00"
     dependencies:
     - alias: customers
       condition: customers.enabled
@@ -40,11 +29,34 @@ entries:
       name: common
       repository: file://../common
       version: 0.1.0
-    description: Helm chart to install the coolstore microservice
-    digest: 9522748be3a2583e39126d5a710d3bb47d6422548f29792ec98c0d2a4a43652b
-    name: coolstore
+    description: Applications chart for the coolstore microservice in the MAD workshop
+    digest: ed8ab3481cc6c5ef519e352b50076b35850a2a8aa82784059951546b504d4b23
+    icon: https://static.redhat.com/libs/redhat/brand-assets/latest/corp/logo.svg
+    keywords:
+    - mad
+    - coolstore
+    - microservice
+    - workshop
+    name: coolstore-microservice
     type: application
     urls:
-    - coolstore-0.1.0.tgz
-    version: 0.1.0
-generated: "2024-03-05T17:15:08.594735-05:00"
+    - coolstore-microservice-1.0.0.tgz
+    version: 1.0.0
+  coolstore-microservice-common:
+  - apiVersion: v1
+    appVersion: 1.0.0
+    created: "2024-03-06T20:49:59.775181-05:00"
+    description: A Common chart for the coolstore microservice in the MAD workshop
+    digest: 880789a5d580ac1432b371b459a4f2766fb80d9df755b28eb4173392ea75f587
+    icon: https://static.redhat.com/libs/redhat/brand-assets/latest/corp/logo.svg
+    keywords:
+    - mad
+    - coolstore
+    - microservice
+    - workshop
+    name: coolstore-microservice-common
+    type: application
+    urls:
+    - coolstore-microservice-common-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-03-06T20:49:59.774162-05:00"
