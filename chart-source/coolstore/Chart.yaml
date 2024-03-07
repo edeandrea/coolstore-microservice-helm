@@ -1,8 +1,9 @@
 apiVersion: v2
-name: coolstore
-description: Helm chart to install the coolstore microservice
+name: coolstore-microservice
+description: Applications chart for the coolstore microservice in the MAD workshop
+icon: https://static.redhat.com/libs/redhat/brand-assets/latest/corp/logo.svg
 type: application
-version: 0.1.0
+version: 1.0.0
 
 dependencies:
   - name: common
