@@ -14,5 +14,5 @@ dependencies:
 - name: coolstore-microservice-common
   repository: file://../common
   version: 1.0.0
-digest: sha256:79fc6d135d12ef41056b487c288aba992261095646a59b638db54735eec084de
-generated: "2024-03-07T15:14:54.998602-05:00"
+digest: sha256:f2765b398f1d1669c33fe1e8ec7628d821d35b2dc829bcc4ff286735b340334b
+generated: "2024-03-08T07:19:06.310532-05:00"
