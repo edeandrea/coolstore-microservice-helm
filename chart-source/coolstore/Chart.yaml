@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 name: coolstore-microservice
 description: Applications chart for the coolstore microservice in the MAD workshop
 icon: https://raw.githubusercontent.com/rh-mad-workshop/coolstore-microservice-helm/main/mad.svg
