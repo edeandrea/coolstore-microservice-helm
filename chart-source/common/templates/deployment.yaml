@@ -38,22 +38,4 @@ spec:
               protocol: TCP
               name: http
           resources: {}
-          {{- if .Values.app.connectsToDB }}
-          env:
-            - name: POSTGRESQL_USER
-              valueFrom:
-                secretKeyRef:
-                  key: database-user
-                  name: {{ .Values.inventoryDb.pgsqlUser }}
-            - name: POSTGRESQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  key: database-password
-                  name: {{ .Values.inventoryDb.pgsqlPassword }}
-            - name: POSTGRESQL_DATABASE
-              valueFrom:
-                secretKeyRef:
-                  key: database-name
-                  name: {{ .Values.inventoryDb.pgsqlDatabase }}
-          {{- end }}
       restartPolicy: Always
