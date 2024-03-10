@@ -12,5 +12,6 @@ spec:
       port: 5432
       targetPort: 5432
   selector:
-    app.kubernetes.io/name: {{ .Values.inventoryDb.name }}
+    app: {{ .Values.inventoryDb.name }}
+    deployment: {{ .Values.inventoryDb.name }}
 {{- end }}
