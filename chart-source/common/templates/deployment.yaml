@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
   {{- if .Values.app.connectsToDB }}
-    app.openshift.io/connects-to: '[{"apiVersion":"apps.openshift.io/v1","kind":"Deployment","name":"inventory"},{"apiVersion":"apps.openshift.io/v1","kind":"Deployment","name":"postgresql-inventory"}]'
+    app.openshift.io/connects-to: '[{"apiVersion":"apps.openshift.io/v1","kind":"Deployment","name":"inventory"},{"apiVersion":"apps.openshift.io/v1","kind":"Deployment","name":"postgresql-inventory"},{"apiVersion":"apps/v1","kind":"Deployment","name":"postgresql-inventory"}]'
   {{- else if .Values.app.connectsToSvcs }}
     app.openshift.io/connects-to: '[{"apiVersion":"apps/v1","kind":"Deployment","name":"customers"},{"apiVersion":"apps/v1","kind":"Deployment","name":"orders"},{"apiVersion":"apps/v1","kind":"Deployment","name":"inventory"}]'
   {{- else if .Values.app.connectsTogateway }}
@@ -38,4 +38,22 @@ spec:
               protocol: TCP
               name: http
           resources: {}
+          {{- if .Values.app.connectsToDB }}
+          env:
+            - name: POSTGRESQL_USER
+              valueFrom:
+                secretKeyRef:
+                  key: database-user
+                  name: {{ .Values.inventoryDb.pgsqlUser }}
+            - name: POSTGRESQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: database-password
+                  name: {{ .Values.inventoryDb.pgsqlPassword }}
+            - name: POSTGRESQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  key: database-name
+                  name: {{ .Values.inventoryDb.pgsqlDatabase }}
+          {{- end }}
       restartPolicy: Always
