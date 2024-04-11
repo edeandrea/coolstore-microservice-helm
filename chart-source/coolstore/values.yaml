@@ -21,6 +21,10 @@ orders:
     containerPort: 8080
     servicePort: 8080
     portName: http
+    env:
+      MANAGEMENT_OTLP_TRACING_ENDPOINT: http://otel-collector:4318/v1/traces
+      MANAGEMENT_TRACING_SAMPLING_PROBABILITY: '1.0'
+      SPRING_APPLICATION_NAME: orders
 
 gateway:
   enabled: true
@@ -34,6 +38,10 @@ gateway:
     containerPort: 8080
     servicePort: 8080
     portName: http
+    env:
+      MANAGEMENT_OTLP_TRACING_ENDPOINT: http://otel-collector:4318/v1/traces
+      MANAGEMENT_TRACING_SAMPLING_PROBABILITY: '1.0'
+      SPRING_APPLICATION_NAME: gateway
 
 frontend:
   enabled: true
@@ -61,11 +69,13 @@ inventory:
     containerPort: 8080
     servicePort: 8080
     portName: http
+    env:
+      QUARKUS_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT: http://otel-collector:4317
+      QUARKUS_APPLICATION_NAME: inventory
   inventoryDb:
     name: postgresql-inventory
     replicaCount: 1
     image: quay.io/openshiftlabs/coolstore-microservice-inventory-postgresql:10
-    
     imagePullPolicy: IfNotPresent 
     pgsqlUser: inventory
     pgsqlPassword: inventory

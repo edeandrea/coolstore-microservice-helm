@@ -38,4 +38,11 @@ spec:
               protocol: TCP
               name: http
           resources: {}
+          {{- if .Values.app.runtime.env }}
+          env:
+            {{- range $key, $val := .Values.app.runtime.env }}
+            - name: {{ $key }}
+              value: {{ tpl $val $ }}
+            {{- end }}
+          {{- end }}
       restartPolicy: Always
